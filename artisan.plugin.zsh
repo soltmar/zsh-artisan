@@ -15,7 +15,7 @@ function artisan() {
     fi
 
     _artisan_start_time=`date +%s`
-    php $_artisan $*
+    ./$_artisan $*
     _artisan_exit_status=$? # Store the exit status so we can return it later
 
     if [[ $1 = "make:"* && $ARTISAN_OPEN_ON_MAKE_EDITOR != "" ]]; then
